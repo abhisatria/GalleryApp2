@@ -6,7 +6,6 @@
     android:layout_margin="5dp"
     android:padding="5dp"
     android:elevation="12dp"
-
     android:background="#ffffff"
     android:orientation="vertical">
 
