@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     android:background="@android:color/black"
     tools:context=".ImageActivity">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        ></android.support.v7.widget.Toolbar>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

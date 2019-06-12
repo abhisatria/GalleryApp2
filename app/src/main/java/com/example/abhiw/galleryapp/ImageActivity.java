@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,24 +23,11 @@ public class ImageActivity extends AppCompatActivity {
         intent.putExtra("title_image",title);
         return intent;
     }
-    @SuppressLint("NewApi")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
 
-        Toolbar mToolbar = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            mToolbar = (Toolbar) findViewById(R.id.toolbar);
-            mToolbar.setTitle(getIntent().getStringExtra("title_image"));
-            mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
-            mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
-        }
         ImageView fullscreenimg = (ImageView) findViewById(R.id.imagefs);
 
         String image_uri = getIntent().getStringExtra("extra_image_uri");
