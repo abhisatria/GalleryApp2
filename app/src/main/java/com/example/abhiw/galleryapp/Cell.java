@@ -15,10 +15,6 @@ public class Cell {
         this.uri = uri;
     }
 
-
-
-
-
     public String getTitle() {
         return title;
     }

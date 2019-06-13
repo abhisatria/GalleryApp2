@@ -97,8 +97,20 @@ public class MainActivity extends AppCompatActivity {
         theimage.clear();
 
         File downloadFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES+"/"+path);
-
-        if(downloadFolder.exists())
+        boolean success=true;
+        if(!downloadFolder.exists())
+        {
+            Toast.makeText(this,"Gaada",Toast.LENGTH_LONG).show();
+            success = downloadFolder.mkdirs();
+            if(success){
+                Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else
         {
             File files[] = downloadFolder.listFiles();
 
