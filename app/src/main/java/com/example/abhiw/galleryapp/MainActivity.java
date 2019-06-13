@@ -96,12 +96,12 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Cell> theimage = new ArrayList<>();
         theimage.clear();
 
-        File downloadFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES+"/"+path);
+        File downloadFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES+File.separator+path);
         boolean success=true;
         if(!downloadFolder.exists())
         {
             Toast.makeText(this,"Gaada",Toast.LENGTH_LONG).show();
-            success = downloadFolder.mkdirs();
+            success = downloadFolder.mkdir();
             if(success){
                 Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show();
             }
