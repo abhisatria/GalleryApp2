@@ -98,19 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
         File downloadFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES+File.separator+path);
         boolean success=true;
-        if(!downloadFolder.exists())
-        {
-            Toast.makeText(this,"Gaada",Toast.LENGTH_LONG).show();
-            success = downloadFolder.mkdir();
-            if(success){
-                Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
-                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show();
-            }
-        }
-        else
+        if(downloadFolder.exists())
         {
             File files[] = downloadFolder.listFiles();
 
@@ -122,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 theimage.add(cell);
             }
         }
+        
 //        for (int i=0;i<image_titles.length;i++)
 //        {
 //            Cell cell =  new Cell();
