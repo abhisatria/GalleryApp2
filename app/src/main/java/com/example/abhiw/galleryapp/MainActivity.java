@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 theimage.add(cell);
             }
         }
-        
+
 //        for (int i=0;i<image_titles.length;i++)
 //        {
 //            Cell cell =  new Cell();
